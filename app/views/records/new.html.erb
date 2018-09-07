@@ -1,0 +1,44 @@
+<h1>Add new record</h1>
+
+<%= form_for @record do |record| %>
+
+  <p>
+    <%= record.label :custom_date %>
+    <%= record.date_select :custom_date %>
+  </p>
+  
+  <p>
+    <%= record.label :nh4 %>
+    <%= record.text_field :nh4 %>
+  </p>
+  
+  <p>
+    <%= record.label :no2 %>
+    <%= record.text_field :no2 %>
+  </p>
+  
+  <p>
+    <%= record.label :no3 %>
+    <%= record.text_field :no3 %>
+  </p>
+
+  <p>
+    <%= record.label :ph %>
+    <%= record.text_field :ph %>
+  </p>
+  
+  <p>
+    <%= record.label :kh %>
+    <%= record.text_field :kh %>
+  </p>
+  
+  <p>
+    <%= record.label :gh %>
+    <%= record.text_field :gh %>
+  </p>
+  
+  <p>
+    <%= record.submit %>
+  </p>
+
+<% end %>

@@ -1,0 +1,13 @@
+<h1>Edit the tank</h1>
+
+<%= form_for @tank do |tank| %>
+  <p>
+    <%= tank.label :title %>
+    <%= tank.text_field :title %>
+  </p>
+  
+  <p>
+    <%= tank.submit %>
+  </p>
+
+<% end %>

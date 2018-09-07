@@ -1,0 +1,10 @@
+<h1>All your tanks</h1>
+
+<table>
+  <% @tanks.each do |tank| %>
+    <tr>
+      <td><%= link_to tank.title, tank_path(tank) %></td>
+      <td></td>
+    </tr>
+  <% end %>
+</table>
