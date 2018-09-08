@@ -1,23 +1,53 @@
-<h1>Sign up</h1>
-<%= form_for @user do |user| %>
+<div class = 'header-title'>
+  <h1>Sign up</h1>
+</div>
 
-<p>
- <%= user.label :username %>
- <%= user.text_field :username %>
-</p>
 
-<p>
-  <%= user.label :email %>
-  <%= user.email_field :email%>
-</p>
+ 
+<%= form_for(@user, :html => {class: 'form-horizontal', role: 'form'}) do |user| %>
+  
+  <div class = 'row'>
+    <div class = 'col-xs-6 col-xs-offset-4'>
+      
+      <div class = 'form-group'>
+        <div class = 'control-label col-sm-2'>
+             <%= user.label :username %>
+        </div>
+        
+        <div class = 'col-sm-4'>
+          <%= user.text_field :username, class: 'form-control', autofocus: true, placeholder: 'Your username' %>
+        </div>
+      </div>
+      
+      <div class = 'form-group'>
+        <div class = 'control-label col-sm-2'>
+          <%= user.label :email %>
+        </div>
+        
+        <div class = 'col-sm-4'>
+          <%= user.email_field :email, class: 'form-control', placeholder: 'Used for login' %>
+        </div>
+      </div>
+      
+      <div class = 'form-group'>
+        <div class = 'control-label col-sm-2'>
+          <%= user.label :password %>
+        </div>
+        
+        <div class ='col-sm-4'>
+          <%= user.password_field :password, class: 'form-control' %>
+        </div>
+      </div>
+      
+      <div class = 'form-group'>
+        <div class = 'col-sm-offset-2 col-sm-10'>
+          <%= user.submit 'Sign up', class: 'btn btn-lg btn-primary'%>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+ <% end %>
 
-<p>
-  <%= user.label :password %>
-  <%= user.password_field :password %>
-</p>
-
-<p>
-  <%= user.submit 'Sign up'%>
-</p>
-
-<% end %>

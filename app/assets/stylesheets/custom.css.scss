@@ -1,0 +1,41 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.header-title h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 5px;
+  border-bottom: 1px #eaeaea solid;
+  font-weight: bold;
+}
+
+.jumbo-home{
+  text-align: center;
+}
+
+.jumbo-home > h1 {
+  font-weight: bold;
+}
+
+.signup-form {
+  text-align: center;
+}
+
+footer {
+  border-top: 1px #eaeaea solid;
+}
+
+footer > small {
+  float: left;
+}
+
+footer > nav {
+  float: right;
+}
+
+footer > nav > ul > li {
+  float: left;
+  margin-right: 30px;
+  list-style: none;
+}
